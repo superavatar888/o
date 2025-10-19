@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Ozon选品助手",
+    "version": "1.0",
+    "description": "自动分析店铺商品数据",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icons/icon48.png"
+    },
+    "content_scripts": [{
+      "matches": ["*://*.ozon.ru/seller/*"],
+      "js": ["js/content.js"],
+      "css": ["css/styles.css"]
+      }],  
+    "permissions": ["storage"],
+    "icons": {
+      "48": "icons/icon48.png",
+      "128": "icons/icon48.png"
+    }
+  }
