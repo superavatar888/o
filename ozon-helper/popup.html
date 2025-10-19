@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>选品控制台</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head><script src="../lib/xlsx.full.min.js"></script>
+<body>
+  <div class="container">
+    <h1>Ozon选品助手</h1>
+    <div class="filters">
+      <label>上架时间：<input type="month" id="product-date" value="2025-03"></label>
+      <label>最大跟卖：<input type="number" id="max-sellers" value="10"></label>
+      <label>最低转化：<input type="number" id="min-conversion" value="10">%</label>
+    </div>
+    <button id="start-btn">开始分析店铺</button>
+    <div class="status">准备就绪...</div>
+  </div>
+  <button id="export-btn" style="margin-top: 10px; display: none;">导出Excel</button>
+  <script src="js/popup.js"></script>
+</body>
+</html>
