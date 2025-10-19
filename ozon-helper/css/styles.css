@@ -1,0 +1,38 @@
+#ozon-helper-panel {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    width: 300px;
+  }
+  
+  .progress {
+    margin-top: 10px;
+  }
+  
+  .container {
+    width: 300px;
+    padding: 15px;
+  }
+  
+  .filters {
+    margin: 15px 0;
+  }
+  
+  .filters label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  #start-btn {
+    background: #005BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
