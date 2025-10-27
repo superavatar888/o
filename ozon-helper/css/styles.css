@@ -1,38 +1,152 @@
-#ozon-helper-panel {
+#ozon-helper-sidebar {
     position: fixed;
-    top: 10px;
-    right: 10px;
-    background: white;
-    padding: 15px;
+    top: 0;
+    right: 0;
+    width: 320px;
+    max-width: 90vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: -4px 0 16px rgba(15, 25, 43, 0.12);
+    z-index: 2147483647;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+}
+
+#ozon-helper-sidebar *,
+#ozon-helper-sidebar *::before,
+#ozon-helper-sidebar *::after {
+    box-sizing: border-box;
+}
+
+#ozon-helper-sidebar .ozon-helper-header {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0d1b2a;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+#ozon-helper-sidebar .ozon-helper-body {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+#ozon-helper-sidebar label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: #1f2933;
+}
+
+#ozon-helper-sidebar input[type="text"],
+#ozon-helper-sidebar input[type="number"] {
+    padding: 10px 12px;
+    border: 1px solid rgba(15, 25, 43, 0.2);
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#ozon-helper-sidebar input[type="text"]:focus,
+#ozon-helper-sidebar input[type="number"]:focus {
+    border-color: #005bff;
+    box-shadow: 0 0 0 2px rgba(0, 91, 255, 0.15);
+}
+
+#ozon-helper-start-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #005bff, #437dff);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+#ozon-helper-start-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0, 91, 255, 0.24);
+}
+
+#ozon-helper-start-btn:disabled {
+    background: #a9b9ff;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.ozon-helper-progress-wrapper {
+    margin-top: 18px;
+}
+
+#ozon-helper-progress {
+    width: 100%;
+    height: 8px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    z-index: 9999;
-    width: 300px;
-  }
-  
-  .progress {
-    margin-top: 10px;
-  }
-  
-  .container {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.08);
+    accent-color: #005bff;
+}
+
+#ozon-helper-counter {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #39424e;
+}
+
+#ozon-helper-status {
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #0d1b2a;
+}
+
+#ozon-helper-status.info {
+    color: #0d1b2a;
+}
+
+#ozon-helper-status.warning {
+    color: #b7791f;
+}
+
+#ozon-helper-status.error {
+    color: #c53030;
+}
+
+#ozon-helper-status.success {
+    color: #2f855a;
+}
+
+/* Popup styles */
+.container {
     width: 300px;
     padding: 15px;
-  }
-  
-  .filters {
+}
+
+.filters {
     margin: 15px 0;
-  }
-  
-  .filters label {
+}
+
+.filters label {
     display: block;
     margin-bottom: 8px;
-  }
-  
-  #start-btn {
+}
+
+#start-btn {
     background: #005BFF;
     color: white;
     border: none;
     padding: 8px 15px;
     border-radius: 4px;
     cursor: pointer;
-  }
+}
